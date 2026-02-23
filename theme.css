@@ -1,0 +1,667 @@
+/* 
+ * Claude Code — Obsidian Theme v1.0.0
+ * Based on the Claude Code CLI terminal aesthetic
+ * Pure black, cool grays, minimal accents, monospace throughout
+ * 
+ * Repository: https://github.com/nezlok/obsidian-claude-code
+ * License: MIT
+ * Author: Nezlo K (https://nezlok.com)
+ * 
+ * ============================================
+ * CUSTOMIZATION
+ * ============================================
+ * Override these in a CSS snippet if needed:
+ * 
+ * .theme-dark {
+ *   --claude-bg-primary: #0a0a0a;
+ *   --claude-bg-secondary: #141414;
+ *   --claude-text: #e0e0e0;
+ *   --claude-text-muted: #888888;
+ *   --claude-text-faint: #484848;
+ *   --claude-accent: #7ee787;
+ *   --claude-border: #2a2a2a;
+ * }
+ * ============================================
+ */
+
+.theme-dark {
+  /* Core backgrounds — true black like terminal */
+  --background-primary: #0a0a0a;
+  --background-primary-alt: #0f0f0f;
+  --background-secondary: #141414;
+  --background-secondary-alt: #1a1a1a;
+  --background-modifier-border: #2a2a2a;
+  --background-modifier-form-field: #141414;
+  --background-modifier-form-field-highlighted: #1a1a1a;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
+  --background-modifier-success: #1a2a1a;
+  --background-modifier-error: #2a1a1a;
+  --background-modifier-error-rgb: 42, 26, 26;
+  --background-modifier-error-hover: #3a2020;
+  --background-modifier-cover: rgba(10, 10, 10, 0.9);
+
+  /* Text colors — cool grays, slightly brighter */
+  --text-normal: #e0e0e0;
+  --text-muted: #888888;
+  --text-faint: #484848;
+  --text-error: #f47067;
+  --text-error-hover: #ff8080;
+  --text-success: #7ee787;
+  --text-selection: rgba(255, 255, 255, 0.1);
+  --text-on-accent: #0a0a0a;
+  --text-accent: #d4d4d4;
+  --text-accent-hover: #ffffff;
+
+  /* Interactive — minimal, mostly grays */
+  --interactive-normal: #808080;
+  --interactive-hover: #d4d4d4;
+  --interactive-accent: #d4d4d4;
+  --interactive-accent-rgb: 212, 212, 212;
+  --interactive-accent-hover: #ffffff;
+  --interactive-success: #7ee787;
+
+  /* Scrollbar */
+  --scrollbar-active-thumb-bg: #505050;
+  --scrollbar-bg: #0a0a0a;
+  --scrollbar-thumb-bg: #2a2a2a;
+
+  /* Highlights — subtle */
+  --text-highlight-bg: rgba(255, 255, 255, 0.1);
+  --text-highlight-bg-active: rgba(255, 255, 255, 0.15);
+
+  /* Links — understated */
+  --link-color: #a0a0a0;
+  --link-color-hover: #d4d4d4;
+  --link-external-color: #7ee787;
+  --link-external-color-hover: #a0f0a0;
+  --link-unresolved-color: #606060;
+  --link-unresolved-opacity: 0.7;
+
+  /* Tags — subtle */
+  --tag-color: #808080;
+  --tag-color-hover: #d4d4d4;
+  --tag-background: rgba(255, 255, 255, 0.05);
+  --tag-background-hover: rgba(255, 255, 255, 0.1);
+
+  /* Code — terminal style */
+  --code-normal: #d4d4d4;
+  --code-comment: #606060;
+  --code-function: #d4d4d4;
+  --code-keyword: #7ee787;
+  --code-string: #a5d6ff;
+  --code-property: #d4d4d4;
+  --code-tag: #7ee787;
+  --code-value: #a5d6ff;
+  --code-background: #141414;
+
+  /* Indentation guides */
+  --indentation-guide-color: #2a2a2a;
+  --indentation-guide-color-active: #404040;
+
+  /* Blockquotes — subtle left border */
+  --blockquote-border-color: #404040;
+  --blockquote-border-thickness: 2px;
+  --blockquote-background-color: transparent;
+
+  /* Headings — all same color, distinguished by size */
+  --h1-color: #d4d4d4;
+  --h2-color: #d4d4d4;
+  --h3-color: #d4d4d4;
+  --h4-color: #a0a0a0;
+  --h5-color: #a0a0a0;
+  --h6-color: #808080;
+
+  /* Bold and italic */
+  --bold-color: #ffffff;
+  --italic-color: #d4d4d4;
+
+  /* Checkboxes */
+  --checkbox-color: #7ee787;
+  --checkbox-color-hover: #a0f0a0;
+  --checkbox-border-color: #505050;
+  --checklist-done-color: #505050;
+
+  /* Tables */
+  --table-header-background: #141414;
+  --table-header-background-hover: #1a1a1a;
+  --table-row-even-background: #0f0f0f;
+  --table-row-odd-background: #0a0a0a;
+
+  /* Inputs */
+  --input-shadow: 0 0 0 0;
+  --input-shadow-hover: 0 0 0 0;
+
+  /* Nav / File explorer */
+  --nav-item-color: #808080;
+  --nav-item-color-hover: #d4d4d4;
+  --nav-item-color-active: #d4d4d4;
+  --nav-item-background-hover: #1a1a1a;
+  --nav-item-background-active: #1a1a1a;
+  --nav-collapse-icon-color: #505050;
+
+  /* Graph */
+  --graph-line: #2a2a2a;
+  --graph-node: #d4d4d4;
+  --graph-node-unresolved: #505050;
+  --graph-node-focused: #ffffff;
+  --graph-node-tag: #7ee787;
+  --graph-node-attachment: #a5d6ff;
+
+  /* Ribbon */
+  --ribbon-background: #0a0a0a;
+  --ribbon-background-collapsed: #0a0a0a;
+
+  /* Titlebar */
+  --titlebar-background: #0a0a0a;
+  --titlebar-background-focused: #0a0a0a;
+
+  /* Status bar */
+  --status-bar-background: #0a0a0a;
+  --status-bar-text-color: #505050;
+
+  /* Tabs */
+  --tab-text-color: #606060;
+  --tab-text-color-focused: #d4d4d4;
+  --tab-text-color-focused-active: #d4d4d4;
+  --tab-background-active: #0a0a0a;
+  --tab-outline-color: transparent;
+
+  /* Prompt (command palette) */
+  --prompt-border-color: #2a2a2a;
+
+  /* Callouts — muted */
+  --callout-default-color: 128, 128, 128;
+  --callout-info: 126, 231, 135;
+  --callout-todo: 212, 212, 212;
+  --callout-warning: 255, 200, 100;
+  --callout-error: 244, 112, 103;
+  --callout-bug: 244, 112, 103;
+  --callout-success: 126, 231, 135;
+  --callout-question: 165, 214, 255;
+  --callout-tip: 126, 231, 135;
+
+  /* Cursor */
+  --cursor: #ffffff;
+}
+
+/* Light theme — inverted terminal */
+.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #fafafa;
+  --background-secondary: #f0f0f0;
+  --background-secondary-alt: #e5e5e5;
+  --background-modifier-border: #d0d0d0;
+  
+  --text-normal: #1a1a1a;
+  --text-muted: #606060;
+  --text-faint: #909090;
+  --text-accent: #1a1a1a;
+  --text-accent-hover: #000000;
+  
+  --interactive-accent: #1a1a1a;
+  --interactive-accent-hover: #000000;
+  
+  --link-color: #505050;
+  --link-color-hover: #1a1a1a;
+  --link-external-color: #2a6e3f;
+  
+  --tag-color: #505050;
+  --tag-background: rgba(0, 0, 0, 0.05);
+  
+  --code-background: #f0f0f0;
+  --blockquote-border-color: #c0c0c0;
+}
+
+/* Typography — everything monospace like a terminal */
+body {
+  /* ALL monospace, all the time */
+  --font-text: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-interface: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-monospace: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  
+  --font-text-size: 13px;
+  --line-height-normal: 1.4;
+  --font-monospace-size: 13px;
+  
+  /* Tighter spacing */
+  --p-spacing: 0.75em;
+  --heading-spacing: 1em;
+  --list-indent: 1.5em;
+}
+
+/* Make the editor feel more like a terminal */
+.markdown-source-view.mod-cm6 .cm-content {
+  font-family: var(--font-monospace);
+}
+
+/* Enable font ligatures for code */
+.markdown-rendered code,
+.markdown-rendered pre,
+.cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock {
+  font-family: var(--font-monospace);
+  font-feature-settings: "liga" 1, "calt" 1;
+  font-variant-ligatures: contextual;
+}
+
+/* Headings — in editor view */
+.cm-header {
+  font-family: var(--font-monospace);
+  font-weight: 600;
+}
+
+/* Inline code — subtle background */
+.markdown-rendered code,
+.cm-inline-code {
+  background-color: var(--code-background);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.95em;
+}
+
+/* Code blocks — clean terminal look */
+.markdown-rendered pre {
+  background-color: var(--code-background);
+  border-radius: 4px;
+  padding: 1em;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Blockquotes — minimal */
+.markdown-rendered blockquote {
+  border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--text-muted);
+}
+
+/* Tags — minimal pills */
+.tag {
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+
+/* Checkbox styling */
+.task-list-item-checkbox {
+  border-radius: 3px;
+}
+
+.task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+/* Links — subtle underline */
+.markdown-rendered a.internal-link,
+.markdown-rendered a.external-link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-rendered a.internal-link:hover,
+.markdown-rendered a.external-link:hover {
+  border-bottom-color: var(--text-muted);
+}
+
+/* Active line — almost invisible, no box */
+.cm-active {
+  background-color: transparent !important;
+}
+
+/* Or if you want a very subtle indicator, just a faint left border: */
+.cm-activeLine {
+  background-color: transparent !important;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  margin-left: -2px;
+}
+
+/* Headers in editor — no extra padding/height */
+.cm-line.HyperMD-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Markdown formatting markers — dim them */
+.cm-formatting,
+.cm-formatting-header,
+.cm-formatting-list,
+.cm-formatting-quote,
+.cm-formatting-link,
+.cm-formatting-code,
+.cm-formatting-strong,
+.cm-formatting-em {
+  color: var(--text-faint) !important;
+}
+
+/* Header text same color as body, just sized differently */
+.cm-header,
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  color: var(--text-normal) !important;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Cursor — bright white block feel */
+.cm-cursor {
+  border-left-color: var(--cursor) !important;
+  border-left-width: 2px !important;
+}
+
+/* Clean up the interface */
+.workspace-leaf-content {
+  background-color: var(--background-primary);
+}
+
+/* Minimal dividers */
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  background-color: var(--background-modifier-border);
+}
+
+/* Status bar — barely there */
+.status-bar {
+  border-top: 1px solid var(--background-modifier-border);
+  font-size: 12px;
+}
+
+/* File explorer — terminal style */
+.nav-folder-title,
+.nav-file-title,
+.nav-folder-title-content,
+.nav-file-title-content {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.nav-folder-title {
+  font-weight: 500;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  padding: 2px 8px;
+  margin: 0;
+}
+
+.nav-folder-children {
+  padding-left: 12px;
+  border-left: 1px solid var(--background-modifier-border);
+  margin-left: 6px;
+}
+
+/* Smooth but quick transitions */
+a, button, .nav-file-title, .nav-folder-title {
+  transition: color 0.1s ease, background-color 0.1s ease;
+}
+
+/* ============================================
+   TERMINAL-LIKE SPACING AND ELEMENTS
+   ============================================ */
+
+/* Horizontal rules — thin terminal divider */
+.markdown-rendered hr,
+.cm-line hr,
+hr {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin: 0.75em 0;
+  background: none;
+  height: 0;
+  opacity: 0.5;
+}
+
+/* HR in editor */
+.cm-line.hr {
+  border-color: #2a2a2a;
+}
+
+.HyperMD-hr {
+  color: #2a2a2a;
+}
+
+/* Paragraphs — tight spacing */
+.markdown-rendered p {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+/* Headings — compact, no excessive margins */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  padding: 0;
+  border: none;
+  font-family: var(--font-monospace);
+  font-weight: 600;
+}
+
+.markdown-rendered h1 { font-size: 1.4em; }
+.markdown-rendered h2 { font-size: 1.2em; }
+.markdown-rendered h3 { font-size: 1.1em; }
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 { font-size: 1em; }
+
+/* Lists — tight and terminal-like */
+.markdown-rendered ul,
+.markdown-rendered ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+.markdown-rendered li {
+  margin-bottom: 0.25em;
+}
+
+.markdown-rendered li::marker {
+  color: var(--text-faint);
+}
+
+/* Bullet style — simple dash like terminal */
+.markdown-rendered ul > li::marker {
+  content: "- ";
+}
+
+/* Editor margins — align with frontmatter */
+.markdown-source-view.mod-cm6 .cm-content {
+  padding: 0.5em 0;
+  max-width: none;
+}
+
+.markdown-reading-view,
+.markdown-preview-view {
+  padding: 0;
+}
+
+/* The actual content sizer — align with properties */
+.markdown-preview-sizer {
+  padding: 0 var(--size-4-4);
+  max-width: none;
+}
+
+/* Match the metadata/properties container alignment */
+.metadata-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Inline title alignment */
+.inline-title {
+  padding-left: 0;
+}
+
+/* Line numbers — terminal style */
+.cm-lineNumbers .cm-gutterElement {
+  font-family: var(--font-monospace);
+  font-size: 11px;
+  color: var(--text-faint);
+  padding-right: 1em;
+}
+
+/* Remove fancy decorations */
+.markdown-rendered h1,
+.markdown-rendered h2 {
+  border-bottom: none;
+}
+
+/* Blockquotes — terminal pipe style */
+.markdown-rendered blockquote {
+  font-style: normal;
+  margin: 0.5em 0;
+  padding: 0.25em 0 0.25em 1em;
+  border-left: 2px solid var(--text-faint);
+  background: none;
+}
+
+.markdown-rendered blockquote p {
+  margin: 0;
+}
+
+/* Code blocks — terminal box */
+.markdown-rendered pre {
+  margin: 0.75em 0;
+  padding: 0.75em 1em;
+  border-radius: 0;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Inline code — minimal */
+.markdown-rendered code {
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+  font-size: 1em;
+}
+
+/* Tables — terminal grid */
+.markdown-rendered table {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  border-collapse: collapse;
+  margin: 0.75em 0;
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+  border: 1px solid var(--background-modifier-border);
+  padding: 0.4em 0.8em;
+}
+
+/* Checkboxes — square, terminal style */
+.task-list-item-checkbox {
+  border-radius: 0;
+  width: 14px;
+  height: 14px;
+}
+
+/* Links — just color, no underline */
+.markdown-rendered a.internal-link,
+.markdown-rendered a.external-link {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.markdown-rendered a.internal-link:hover,
+.markdown-rendered a.external-link:hover {
+  text-decoration: underline;
+}
+
+/* Tags — minimal, no pill */
+.tag {
+  background: none;
+  padding: 0;
+  color: var(--text-faint);
+}
+
+.tag:hover {
+  color: var(--text-muted);
+  background: none;
+}
+
+/* Sidebar / panels — consistent monospace */
+.sidebar-toggle-button,
+.workspace-tab-header,
+.view-header-title {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+}
+
+/* Tab headers */
+.workspace-tab-header-inner-title {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+}
+
+/* Search and inputs */
+input[type="text"],
+.search-input,
+.prompt-input {
+  font-family: var(--font-monospace);
+  font-size: 13px;
+  border-radius: 0;
+}
+
+/* Command palette — terminal feel */
+.suggestion-item {
+  font-family: var(--font-monospace);
+  font-size: 13px;
+  padding: 4px 8px;
+}
+
+.suggestion-hotkey {
+  font-family: var(--font-monospace);
+  font-size: 11px;
+}
+
+/* Properties/frontmatter — monospace and aligned */
+.metadata-container {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure everything aligns to the same left edge */
+.cm-contentContainer,
+.cm-content,
+.markdown-preview-section,
+.mod-header {
+  padding-left: 0;
+}
+
+/* View content alignment */
+.view-content {
+  padding: 0 24px;
+}
+
+.markdown-source-view .cm-contentContainer {
+  padding-left: 0;
+}
+
+/* Make sure the embed/content areas align */
+.markdown-embed-content {
+  padding-left: 0;
+}
+
+/* Settings — monospace */
+.setting-item-name,
+.setting-item-description {
+  font-family: var(--font-monospace);
+}
