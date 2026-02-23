@@ -103,10 +103,10 @@
   --blockquote-border-thickness: 2px;
   --blockquote-background-color: transparent;
 
-  /* Headings — all same color, distinguished by size */
-  --h1-color: #d4d4d4;
-  --h2-color: #d4d4d4;
-  --h3-color: #d4d4d4;
+  /* Headings — H1/H2 get Claude coral, rest neutral */
+  --h1-color: #d4a5a5;
+  --h2-color: #c4a5a5;
+  --h3-color: #e0e0e0;
   --h4-color: #a0a0a0;
   --h5-color: #a0a0a0;
   --h6-color: #808080;
@@ -335,15 +335,21 @@ body {
   color: var(--text-faint) !important;
 }
 
-/* Header text same color as body, just sized differently */
+/* Header text — H1/H2 get Claude coral accent, rest stay neutral */
 .cm-header,
-.cm-header-1,
-.cm-header-2,
 .cm-header-3,
 .cm-header-4,
 .cm-header-5,
 .cm-header-6 {
   color: var(--text-normal) !important;
+}
+
+.cm-header-1 {
+  color: #d4a5a5 !important;  /* Muted coral/pink — Claude lobster vibe */
+}
+
+.cm-header-2 {
+  color: #c4a5a5 !important;  /* Slightly more muted for H2 */
 }
 
 /* Selection */
