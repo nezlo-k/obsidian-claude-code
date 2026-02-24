@@ -341,15 +341,16 @@ body {
   color: var(--text-faint) !important;
 }
 
-/* Header # markers — darker coral/orange */
-.cm-formatting-header,
-.cm-formatting-header-1,
+/* Header # markers — H1 darker, rest lighter */
+.cm-formatting-header-1 {
+  color: #a07070 !important;
+}
 .cm-formatting-header-2,
 .cm-formatting-header-3,
 .cm-formatting-header-4,
 .cm-formatting-header-5,
 .cm-formatting-header-6 {
-  color: #a07070 !important;
+  color: #d4a5a5 !important;
 }
 
 /* Header text — H1/H2 get Claude coral accent, rest stay neutral */
