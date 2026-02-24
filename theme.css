@@ -358,8 +358,8 @@ body {
   color: var(--text-faint) !important;
 }
 
-/* Header # markers — first span in line is the hash symbol */
-.cm-line .cm-header-1:first-child {
+/* Header # markers — TEST all cm-header-1 */
+.cm-header-1 {
   color: #00ffff !important;  /* CYAN TEST */
 }
 
