@@ -342,14 +342,27 @@ body {
 }
 
 /* Header # markers — H1 darker, rest lighter */
-.cm-formatting-header-1 {
+.cm-header-1 .cm-formatting-header,
+.cm-formatting-header.cm-formatting-header-1,
+span.cm-formatting-header-1 {
   color: #a07070 !important;
 }
-.cm-formatting-header-2,
-.cm-formatting-header-3,
-.cm-formatting-header-4,
-.cm-formatting-header-5,
-.cm-formatting-header-6 {
+
+.cm-header-2 .cm-formatting-header,
+.cm-header-3 .cm-formatting-header,
+.cm-header-4 .cm-formatting-header,
+.cm-header-5 .cm-formatting-header,
+.cm-header-6 .cm-formatting-header,
+.cm-formatting-header.cm-formatting-header-2,
+.cm-formatting-header.cm-formatting-header-3,
+.cm-formatting-header.cm-formatting-header-4,
+.cm-formatting-header.cm-formatting-header-5,
+.cm-formatting-header.cm-formatting-header-6,
+span.cm-formatting-header-2,
+span.cm-formatting-header-3,
+span.cm-formatting-header-4,
+span.cm-formatting-header-5,
+span.cm-formatting-header-6 {
   color: #d4a5a5 !important;
 }
 
