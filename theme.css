@@ -242,20 +242,29 @@ body {
   line-height: 1.6 !important;
 }
 
-/* Reading view paragraph spacing */
+/* Reading view paragraph spacing — match editing view */
 .markdown-rendered p {
+  margin-bottom: 1.2em;
+  line-height: 1.7;
+}
+
+/* Reading view heading spacing — match editing view */
+.markdown-rendered h1 {
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
-/* Reading view heading spacing */
-.markdown-rendered h1,
-.markdown-rendered h2,
+.markdown-rendered h2 {
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+}
+
 .markdown-rendered h3,
 .markdown-rendered h4,
 .markdown-rendered h5,
 .markdown-rendered h6 {
   margin-top: 1.5em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.6em;
 }
 
 /* Enable font ligatures for code */
