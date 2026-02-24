@@ -232,6 +232,13 @@ body {
 /* Make the editor feel more like a terminal */
 .markdown-source-view.mod-cm6 .cm-content {
   font-family: var(--font-monospace);
+  font-size: 10px !important;
+}
+
+/* Reading view body text */
+.markdown-preview-view,
+.markdown-rendered {
+  font-size: 10px !important;
 }
 
 /* Enable font ligatures for code */
@@ -458,12 +465,12 @@ hr {
   font-weight: 600;
 }
 
-.markdown-rendered h1 { font-size: 1.3em; }
-.markdown-rendered h2 { font-size: 1.15em; }
-.markdown-rendered h3 { font-size: 1.05em; }
+.markdown-rendered h1 { font-size: 1.2em !important; }
+.markdown-rendered h2 { font-size: 1.1em !important; }
+.markdown-rendered h3 { font-size: 1.0em !important; }
 .markdown-rendered h4,
 .markdown-rendered h5,
-.markdown-rendered h6 { font-size: 1em; }
+.markdown-rendered h6 { font-size: 0.95em !important; }
 
 /* Lists — tight and terminal-like */
 .markdown-rendered ul,
@@ -514,6 +521,7 @@ hr {
   padding-left: 0;
   color: #ffffff !important;
   font-weight: 600;
+  font-size: 14px !important;
 }
 
 /* Line numbers — terminal style */
@@ -641,7 +649,7 @@ input[type="text"],
 /* Properties/frontmatter — monospace and aligned */
 .metadata-container {
   font-family: var(--font-monospace);
-  font-size: 11px;
+  font-size: 12px;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
