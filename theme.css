@@ -372,15 +372,15 @@ span.cm-formatting-header-6 {
 .cm-header-4,
 .cm-header-5,
 .cm-header-6 {
-  color: var(--text-normal) !important;
+  color: var(--text-normal);
 }
 
-.cm-header-1 {
-  color: #d4a5a5 !important;  /* Muted coral/pink — Claude lobster vibe */
+.cm-header-1:not(.cm-formatting) {
+  color: #d4a5a5;  /* Muted coral/pink — Claude lobster vibe */
 }
 
-.cm-header-2 {
-  color: #c4a5a5 !important;  /* Slightly more muted for H2 */
+.cm-header-2:not(.cm-formatting) {
+  color: #c4a5a5;  /* Slightly more muted for H2 */
 }
 
 /* Selection */
