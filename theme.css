@@ -509,9 +509,11 @@ hr {
   padding-right: 0;
 }
 
-/* Inline title alignment */
+/* Inline title — white to distinguish from markdown headers */
 .inline-title {
   padding-left: 0;
+  color: #ffffff !important;
+  font-weight: 600;
 }
 
 /* Line numbers — terminal style */
