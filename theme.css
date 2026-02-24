@@ -599,7 +599,7 @@ hr {
   text-decoration: underline;
 }
 
-/* Tags — minimal, no pill */
+/* Tags — minimal, no pill, coral hashtag */
 .tag {
   background: none;
   padding: 0;
@@ -609,6 +609,15 @@ hr {
 .tag:hover {
   color: var(--text-muted);
   background: none;
+}
+
+/* Tag hashtag symbol in coral */
+.cm-hashtag-begin {
+  color: #d4a5a5 !important;
+}
+
+.metadata-container .multi-select-pill-content::before {
+  color: #d4a5a5;
 }
 
 /* Sidebar / panels — consistent monospace */
