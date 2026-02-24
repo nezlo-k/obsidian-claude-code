@@ -219,9 +219,9 @@ body {
   --font-interface: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   --font-monospace: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   
-  --font-text-size: 11px;
+  --font-text-size: 10px;
   --line-height-normal: 1.4;
-  --font-monospace-size: 11px;
+  --font-monospace-size: 10px;
   
   /* Tighter spacing */
   --p-spacing: 0.75em;
@@ -377,7 +377,7 @@ body {
 /* Status bar — barely there */
 .status-bar {
   border-top: 1px solid var(--background-modifier-border);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 /* File explorer — terminal style */
@@ -519,7 +519,7 @@ hr {
 /* Line numbers — terminal style */
 .cm-lineNumbers .cm-gutterElement {
   font-family: var(--font-monospace);
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-faint);
   padding-right: 1em;
 }
@@ -561,7 +561,7 @@ hr {
 /* Tables — terminal grid */
 .markdown-rendered table {
   font-family: var(--font-monospace);
-  font-size: 12px;
+  font-size: 11px;
   border-collapse: collapse;
   margin: 0.75em 0;
 }
@@ -622,26 +622,26 @@ input[type="text"],
 .search-input,
 .prompt-input {
   font-family: var(--font-monospace);
-  font-size: 13px;
+  font-size: 12px;
   border-radius: 0;
 }
 
 /* Command palette — terminal feel */
 .suggestion-item {
   font-family: var(--font-monospace);
-  font-size: 13px;
+  font-size: 12px;
   padding: 4px 8px;
 }
 
 .suggestion-hotkey {
   font-family: var(--font-monospace);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* Properties/frontmatter — monospace and aligned */
 .metadata-container {
   font-family: var(--font-monospace);
-  font-size: 12px;
+  font-size: 11px;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
