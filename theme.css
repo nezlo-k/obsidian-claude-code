@@ -358,14 +358,9 @@ body {
   color: var(--text-faint) !important;
 }
 
-/* Header text — coral */
+/* Header text base */
 .cm-header-1 {
   color: #d4a5a5;
-}
-
-/* Header # marker — darker, first of type */
-.cm-line .cm-header-1:first-of-type {
-  color: #00ffff !important;  /* CYAN TEST - should only hit the # */
 }
 
 .cm-line .cm-header-2:first-child,
@@ -391,6 +386,11 @@ body {
 
 .cm-header-2:not(.cm-formatting) {
   color: #c4a5a5;  /* Slightly more muted for H2 */
+}
+
+/* Header # marker — must come AFTER the :not rules to override */
+.cm-line .cm-header-1:first-of-type {
+  color: #00ffff !important;  /* CYAN TEST */
 }
 
 /* Selection */
