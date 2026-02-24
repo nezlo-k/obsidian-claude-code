@@ -654,6 +654,13 @@ input[type="text"],
   padding-right: 0 !important;
 }
 
+/* Fix strikethrough on property tags */
+.metadata-container .multi-select-pill,
+.metadata-container .tag,
+.metadata-container a {
+  text-decoration: none !important;
+}
+
 /* Ensure everything aligns to the same left edge */
 .cm-contentContainer,
 .cm-content,
