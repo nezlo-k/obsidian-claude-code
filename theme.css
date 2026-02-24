@@ -671,3 +671,40 @@ input[type="text"],
 .setting-item-description {
   font-family: var(--font-monospace);
 }
+
+/* ============================================
+   MOBILE — iOS/Android specific adjustments
+   ============================================ */
+
+/* Phone screens — add breathing room on edges */
+.is-mobile .view-content {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.is-mobile .markdown-preview-sizer {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-content {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.is-mobile .markdown-reading-view .markdown-preview-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure inline title has margin too */
+.is-mobile .inline-title {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Mobile nav items — more touch-friendly */
+.is-mobile .nav-file-title,
+.is-mobile .nav-folder-title {
+  padding: 6px 12px;
+}
