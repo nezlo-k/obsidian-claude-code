@@ -219,9 +219,9 @@ body {
   --font-interface: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   --font-monospace: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   
-  --font-text-size: 12px;
+  --font-text-size: 11px;
   --line-height-normal: 1.4;
-  --font-monospace-size: 12px;
+  --font-monospace-size: 11px;
   
   /* Tighter spacing */
   --p-spacing: 0.75em;
