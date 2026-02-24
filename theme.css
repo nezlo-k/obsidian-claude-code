@@ -219,9 +219,9 @@ body {
   --font-interface: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   --font-monospace: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   
-  --font-text-size: 13px;
+  --font-text-size: 12px;
   --line-height-normal: 1.4;
-  --font-monospace-size: 13px;
+  --font-monospace-size: 12px;
   
   /* Tighter spacing */
   --p-spacing: 0.75em;
@@ -458,9 +458,9 @@ hr {
   font-weight: 600;
 }
 
-.markdown-rendered h1 { font-size: 1.4em; }
-.markdown-rendered h2 { font-size: 1.2em; }
-.markdown-rendered h3 { font-size: 1.1em; }
+.markdown-rendered h1 { font-size: 1.3em; }
+.markdown-rendered h2 { font-size: 1.15em; }
+.markdown-rendered h3 { font-size: 1.05em; }
 .markdown-rendered h4,
 .markdown-rendered h5,
 .markdown-rendered h6 { font-size: 1em; }
