@@ -332,7 +332,6 @@ body {
 
 /* Markdown formatting markers — dim them */
 .cm-formatting,
-.cm-formatting-header,
 .cm-formatting-list,
 .cm-formatting-quote,
 .cm-formatting-link,
@@ -340,6 +339,17 @@ body {
 .cm-formatting-strong,
 .cm-formatting-em {
   color: var(--text-faint) !important;
+}
+
+/* Header # markers — darker coral/orange */
+.cm-formatting-header,
+.cm-formatting-header-1,
+.cm-formatting-header-2,
+.cm-formatting-header-3,
+.cm-formatting-header-4,
+.cm-formatting-header-5,
+.cm-formatting-header-6 {
+  color: #a07070 !important;
 }
 
 /* Header text — H1/H2 get Claude coral accent, rest stay neutral */
