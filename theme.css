@@ -504,12 +504,24 @@ hr {
   font-weight: 600;
 }
 
-.markdown-rendered h1 { font-size: 1.2em !important; }
-.markdown-rendered h2 { font-size: 1.1em !important; }
-.markdown-rendered h3 { font-size: 1.0em !important; }
+.markdown-rendered h1 { 
+  font-size: 1.2em !important; 
+  color: #f47067 !important;
+}
+.markdown-rendered h2 { 
+  font-size: 1.1em !important; 
+  color: #c4a5a5 !important;
+}
+.markdown-rendered h3 { 
+  font-size: 1.0em !important; 
+  color: var(--text-normal) !important;
+}
 .markdown-rendered h4,
 .markdown-rendered h5,
-.markdown-rendered h6 { font-size: 0.95em !important; }
+.markdown-rendered h6 { 
+  font-size: 0.95em !important; 
+  color: var(--text-muted) !important;
+}
 
 /* Lists — tight and terminal-like */
 .markdown-rendered ul,
