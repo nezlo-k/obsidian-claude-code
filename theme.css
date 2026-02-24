@@ -358,9 +358,14 @@ body {
   color: var(--text-faint) !important;
 }
 
-/* Header # markers — TEST all cm-header-1 */
+/* Header text — coral */
 .cm-header-1 {
-  color: #00ffff !important;  /* CYAN TEST */
+  color: #d4a5a5;
+}
+
+/* Header # marker — darker, first of type */
+.cm-line .cm-header-1:first-of-type {
+  color: #00ffff !important;  /* CYAN TEST - should only hit the # */
 }
 
 .cm-line .cm-header-2:first-child,
