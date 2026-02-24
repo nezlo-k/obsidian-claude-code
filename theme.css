@@ -360,7 +360,7 @@ body {
 
 /* Header # markers — first span in line is the hash symbol */
 .cm-line .cm-header-1:first-child {
-  color: #a07070 !important;
+  color: #00ffff !important;  /* CYAN TEST */
 }
 
 .cm-line .cm-header-2:first-child,
