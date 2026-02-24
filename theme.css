@@ -611,13 +611,13 @@ hr {
   background: none;
 }
 
-/* Tag hashtag symbol in coral */
+/* Tag hashtag symbol — same muted color as tag text */
 .cm-hashtag-begin {
-  color: #d4a5a5 !important;
+  color: var(--text-faint) !important;
 }
 
 .metadata-container .multi-select-pill-content::before {
-  color: #d4a5a5;
+  color: var(--text-faint);
 }
 
 /* Sidebar / panels — consistent monospace */
