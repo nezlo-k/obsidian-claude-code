@@ -239,6 +239,23 @@ body {
 .markdown-preview-view,
 .markdown-rendered {
   font-size: 10px !important;
+  line-height: 1.6 !important;
+}
+
+/* Reading view paragraph spacing */
+.markdown-rendered p {
+  margin-bottom: 1em;
+}
+
+/* Reading view heading spacing */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
 }
 
 /* Enable font ligatures for code */
