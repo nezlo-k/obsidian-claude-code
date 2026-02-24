@@ -360,7 +360,7 @@ body {
 
 /* Header text base */
 .cm-header-1 {
-  color: #d4a5a5;
+  color: #f47067;
 }
 
 .cm-line .cm-header-2:first-child,
@@ -381,7 +381,7 @@ body {
 }
 
 .cm-header-1:not(.cm-formatting) {
-  color: #d4a5a5;  /* Muted coral/pink — Claude lobster vibe */
+  color: #f47067;
 }
 
 .cm-header-2:not(.cm-formatting) {
