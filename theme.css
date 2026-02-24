@@ -623,6 +623,13 @@ hr {
   text-decoration: underline;
 }
 
+/* Visited links — same green as unvisited */
+.markdown-rendered a:visited,
+.markdown-rendered a.internal-link:visited,
+.markdown-rendered a.external-link:visited {
+  color: #7ee787 !important;
+}
+
 /* Tags — minimal, no pill, coral hashtag */
 .tag {
   background: none;
