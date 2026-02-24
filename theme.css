@@ -390,7 +390,7 @@ body {
 
 /* Header # marker — must come AFTER the :not rules to override */
 .cm-line .cm-header-1:first-of-type {
-  color: #00ffff !important;  /* CYAN TEST */
+  color: #a07070 !important;  /* darker coral for H1 marker */
 }
 
 /* Selection */
